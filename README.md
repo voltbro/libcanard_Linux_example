@@ -55,15 +55,15 @@ Now we can finally see the heartbeat messages in readable form:
 ```
 Our UAVCAN node does not only publish heartbeat messages, but also subscribes for the messages on the bus. One example waits for the Bit-type message, another one waits for an Array of Real64. To publish Bit message run the following commands:
 ```bash
-yakut -i 'CAN(can.media.socketcan.SocketCANMedia("vcan0",8),59)' pub 1620.uavcan.primitive.scalar.Bit.1.0 'value: true'
+yakut -i 'CAN(can.media.socketcan.SocketCANMedia("vcan0",8),59)' pub 1620:uavcan.primitive.scalar.Bit.1.0 'value: true'
 ```
 or
 ```bash
-yakut -i 'CAN(can.media.socketcan.SocketCANMedia("vcan0",8),59)' pub 1620.uavcan.primitive.scalar.Bit.1.0 'value: false'
+yakut -i 'CAN(can.media.socketcan.SocketCANMedia("vcan0",8),59)' pub 1620:uavcan.primitive.scalar.Bit.1.0 'value: false'
 ```
 To publish Array-Real64 use:
 ```bash
-yakut -i 'CAN(can.media.socketcan.SocketCANMedia("vcan0",8),59)' pub 1620.uavcan.primitive.array.Real64.1.0 'value: [1.1,2.2,3.3,4.4,5.5]'
+yakut -i 'CAN(can.media.socketcan.SocketCANMedia("vcan0",8),59)' pub 1620:uavcan.primitive.array.Real64.1.0 'value: [1.1,2.2,3.3,4.4,5.5]'
 ```
 
 ## Building project from scratch
